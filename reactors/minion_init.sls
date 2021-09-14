@@ -3,4 +3,5 @@ enforce_state:
         - tgt: {{ data['id'] }}
         - args:
             - salt.minion
+            - local.salt.minion_init
 
