@@ -1,13 +1,6 @@
-minion_setup:
-    local.state.sls:
-        - tgt: {{ data['id'] }}
-        - args:
-            - mods:
-                - salt.minion
-
-minion_setup_done:
-    local.state.sls:
-        - tgt: {{ data['id'] }}
-        - args:
-            - mods:
-                - local.salt.minion_init
+orchestrate_minion_init:
+  runner.state.orchestrate:
+    - args:
+        - mods: orchestrate.minion_init
+        - pillar:
+            event_target: {{ data['id'] }}
