@@ -1,8 +1,13 @@
-enforce_state:
+minion_setup:
     local.state.sls:
         - tgt: {{ data['id'] }}
         - args:
             - mods:
                 - salt.minion
-                - local.salt.minion_init
 
+minion_setup_done:
+    local.state.sls:
+        - tgt: {{ data['id'] }}
+        - args:
+            - mods:
+                - local.salt.minion_init
