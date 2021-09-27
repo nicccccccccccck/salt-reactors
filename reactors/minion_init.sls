@@ -1,5 +1,5 @@
 minion_init_states:
-    local.state.sls
+    local.state.sls:
         - args:
             - mods:
                 - salt.minion
