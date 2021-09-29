@@ -3,4 +3,8 @@ master_vault_auth:
     - tgt: saltmaster
     - args:
         - pillar:
-            token: {{data["data"]["token"]}}
+            salt:
+                master:
+                    vault:
+                        auth:
+                            token: {{data["data"]["token"]}}
