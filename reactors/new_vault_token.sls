@@ -1,3 +1,6 @@
-new_token:
-    local.state.apply:
-        - tgt: saltmaster
+orchestrate_vault_auth:
+  runner.state.orchestrate:
+    - args:
+        - mods: orchestrate.vault_authenticate
+        - pillar:
+            token: {{data["token"]}}
