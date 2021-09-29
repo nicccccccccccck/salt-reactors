@@ -3,4 +3,4 @@ orchestrate_vault_auth:
     - args:
         - mods: orchestrate.vault_authenticate
         - pillar:
-            token: {{data["token"]}}
+            token: {{data["data"]["token"]}}
