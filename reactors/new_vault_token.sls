@@ -7,5 +7,5 @@ master_vault_auth:
                 master:
                     vault:
                         auth:
-                            token: {{data["data"]["token"]}}
+                            token: '{{data["data"]["token"]}}'
 
