@@ -1,3 +1,4 @@
-new_token:
-    local.state.apply:
-        - tgt: saltmaster
+master_vault_auth:
+  local.state.apply:
+    - tgt: saltmaster
+
