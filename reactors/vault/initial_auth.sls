@@ -1,7 +1,7 @@
 vault_initial_auth:
     local.state.sls:
         - tgt: 'role:vault'
-        - match: grains
+        - tgt_type: grain
         - args:
             - mods:
                 - local.vault.authenticate
