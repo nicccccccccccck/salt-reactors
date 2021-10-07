@@ -7,7 +7,7 @@ vault_register_engine:
                 - local.vault.register_engine
             - pillar:
                 vault:
-                    engine_data: {{data["data"]}}
+                    engine_data: {{data}}
 
 
 

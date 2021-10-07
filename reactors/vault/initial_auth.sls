@@ -4,6 +4,6 @@ vault_initial_auth:
         - tgt_type: grain
         - args:
             - mods:
-                - local.vault.authenticate
-                - local.vault.initial_auth_complete
+                - local.vault.event.authenticate
+                - local.vault.event.initial_auth_complete
 
